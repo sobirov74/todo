@@ -1,4 +1,3 @@
-import { ITodo } from "./Interfaces";
 import { useSelector } from "react-redux";
 import { Store } from "../Store/types";
 import { useDispatch } from "react-redux";
@@ -12,9 +11,6 @@ const TodoList = () => {
     <ul>
       {todos.map((todo) => {
         const classes = ["todo"];
-        // if (todo.complated) {
-        //   classes.push("complated");
-        // }
 
         if (todos.length === 0) {
           return <h2 className='center'>The table is empty</h2>;
@@ -25,6 +21,7 @@ const TodoList = () => {
             <label>
               <input
                 type='checkbox'
+                className='checkbox'
                 onChange={(e) => dispatch(updateTodo(todo.id, e.target.value))}
               />
               <input

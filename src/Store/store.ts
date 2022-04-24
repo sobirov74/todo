@@ -28,6 +28,4 @@ export const addTodo = (todos: Todo[], text: string): Todo[] => [
     id: Date.now(),
     done: false,
   },
-
-  // setTodos((prev) => [newTodo, ...prev]);
 ];
